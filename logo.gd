@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 	var viewport_rect = get_viewport().get_visible_rect()
 	
 	position += direction * speed * delta
-    
+	
 	# Wall collisions
 	#
 	# The viewport rectangle `position` is its upper left corner & `end` is its lower right corner
@@ -48,30 +48,30 @@ func _process(delta: float) -> void:
 	# reaches the X or Y position of that edge of the viewport rectangle
 	#
 	# Sprite direction is bounced off of a unit vector pointing inwards from each edge of the viewport
-    #
+	#
 	# Here's a little diagram of the vectors used for the bounce!
 	#
-    #                                  Top                                         
-    #       ┌───────────────────────────┬──────────────────────────────┐           
-    #       │                           │                              │           
-    #       │                           │                              │           
-    #       │                           ▼              <- xx           │           
-    #       │                                              xxxx        │           
-    #       │                                                 xxxx     │           
-    #       │                                                    xxx   │           
-    #       │                                                      xxx │           
-    #  Left ├──────►                       bounce normal (LEFT) ◄──────┤ Right     
-    #       │                                                       xx │           
-    #       │                                                     xxx  │           
-    #       │                                                  xxxx    │           
-    #       │                                    logo path   xxx       │           
-    #       │                                              xxx         │           
-    #       │                           ▲               xxxx           │           
-    #       │                           │          -> xx               │           
-    #       │                           │                              │           
-    #       └───────────────────────────┴──────────────────────────────┘           
-    #                                Bottom                                        
-                                                                                 
+	#                                  Top                                         
+	#       ┌───────────────────────────┬──────────────────────────────┐           
+	#       │                           │                              │           
+	#       │                           │                              │           
+	#       │                           ▼              <- xx           │           
+	#       │                                              xxxx        │           
+	#       │                                                 xxxx     │           
+	#       │                                                    xxx   │           
+	#       │                                                      xxx │           
+	#  Left ├──────►                       bounce normal (LEFT) ◄──────┤ Right     
+	#       │                                                       xx │           
+	#       │                                                     xxx  │           
+	#       │                                                  xxxx    │           
+	#       │                                    logo path   xxx       │           
+	#       │                                              xxx         │           
+	#       │                           ▲               xxxx           │           
+	#       │                           │          -> xx               │           
+	#       │                           │                              │           
+	#       └───────────────────────────┴──────────────────────────────┘           
+	#                                Bottom                                        
+																				 
 	
 	# Top
 	if position.y <= viewport_rect.position.y + (current_height / 2):

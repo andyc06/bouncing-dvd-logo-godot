@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbjviv3bxjilf"]
+
+[ext_resource type="Texture2D" uid="uid://8yox28c81hxg" path="res://dvd-logo.png" id="1_0mgop"]
+[ext_resource type="Script" uid="uid://bd83fxo0jf8lq" path="res://logo.gd" id="2_0mgop"]
+
+[sub_resource type="Environment" id="Environment_0mgop"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.07
+glow_strength = 0.94
+glow_bloom = 0.15
+glow_blend_mode = 1
+glow_hdr_luminance_cap = 14.36
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0mgop"]
+blend_mode = 1
+
+[node name="BounceScene" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0mgop")
+
+[node name="Logo" type="Sprite2D" parent="WorldEnvironment"]
+material = SubResource("CanvasItemMaterial_0mgop")
+position = Vector2(638, 288)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_0mgop")
+script = ExtResource("2_0mgop")

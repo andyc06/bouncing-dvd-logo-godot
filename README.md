@@ -8,4 +8,4 @@ I intentionally didn't look up too many connected concepts (i.e. "how to make a 
 
 ### Video
 
-https://github.com/andyc06/bouncing-dvd-logo-godot/raw/refs/heads/main/demo.webm
+[!(demo video)]https://github.com/andyc06/bouncing-dvd-logo-godot/raw/refs/heads/main/demo.mp4

@@ -1,4 +1,4 @@
-# Bouncing DVD Logo in Godot!
+# Bouncing DVD Logo in Godot
 
 ## What is this?
 

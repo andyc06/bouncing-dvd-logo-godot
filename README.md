@@ -8,4 +8,4 @@ I intentionally didn't look up too many connected concepts (i.e. "how to make a 
 
 ### Video
 
-![Screen capture of the dvd-screensaver project running in a window. A DVD Video logo moves around the screen. Every time the logo touches an edge, it bounces off of it and changes to a new color.](./demo.webm)
+https://github.com/andyc06/bouncing-dvd-logo-godot/raw/refs/heads/main/demo.webm

@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 
+[editor]
+
+movie_writer/movie_file="/Users/andy/dvd-screensaver/demo.avi"
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.0453124, 0.0453124, 0.0453124, 1)

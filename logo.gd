@@ -1,17 +1,15 @@
 extends Sprite2D
 
-var speed = 400
+var speed = 420
 var direction = Vector2.ZERO
-
 # sprite's post-scaled dimensions
 var current_width = self.scale.x * self.get_rect().size.x
 var current_height = self.scale.y * self.get_rect().size.y
-
 var angles = [45, 135, 225, 315]
-
 var hues = [0.0, 0.10, 0.3, 0.45, 0.6, 0.75, 0.82]
 # starting index
 var hue_index = 0
+var viewport_rect = Vector2()
 
 func increment_hue() -> void:
 	 # increment to the next hue index and then wrap around
@@ -20,9 +18,9 @@ func increment_hue() -> void:
 	self_modulate = Color.from_hsv(hue, 1.0, 1.0, 1.0)
 	print("hue index: ", hue_index, " | set to hue value: ", hue)
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	viewport_rect = get_viewport().get_visible_rect()
 	# pick a random initial direction
 	angles.shuffle()
 	direction = Vector2.from_angle(angles[0])
@@ -35,7 +33,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# probably not great to keep recalculating this on every frame!
-	var viewport_rect = get_viewport().get_visible_rect()
 	
 	position += direction * speed * delta
 	
